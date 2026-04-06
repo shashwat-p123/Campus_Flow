@@ -1,0 +1,199 @@
+.profile-page {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Profile Card */
+.profile-card {
+  overflow: hidden;
+  margin-bottom: var(--space-6);
+}
+.profile-banner {
+  height: 120px;
+  background: linear-gradient(135deg, #5B4FE6 0%, #7C6FF7 50%, #2DD4A8 100%);
+}
+.profile-info {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-5);
+  padding: 0 var(--space-6) var(--space-6);
+  margin-top: -36px;
+}
+.profile-avatar-lg {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xl);
+  font-weight: 800;
+  border: 3px solid var(--bg-card);
+  flex-shrink: 0;
+}
+.profile-details { flex: 1; }
+.profile-details h1 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-2);
+}
+.profile-meta-items {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+.profile-meta-items span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Stats */
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.stat-card {
+  padding: var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+.stat-icon { color: var(--primary); }
+.stat-num {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  display: block;
+}
+.stat-lbl {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+
+/* Settings */
+.profile-settings {
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+.profile-settings h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-5);
+}
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.setting-row:last-child { border-bottom: none; }
+.setting-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--text-secondary);
+}
+.setting-title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.setting-desc {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  width: 48px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  background: var(--border-medium);
+  position: relative;
+  transition: background var(--transition-fast);
+  padding: 0;
+}
+.toggle-switch[data-active="true"] {
+  background: var(--primary);
+}
+.toggle-knob {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+.toggle-switch[data-active="true"] .toggle-knob {
+  transform: translateX(22px);
+}
+
+/* Content Tabs */
+.profile-content { margin-bottom: var(--space-8); }
+.profile-tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  border-bottom: 2px solid var(--border-light);
+}
+.ptab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all var(--transition-fast);
+}
+.ptab:hover { color: var(--text-primary); }
+.ptab.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.profile-content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.mini-card {
+  display: flex;
+  overflow: hidden;
+}
+.mc-bar { width: 4px; flex-shrink: 0; }
+.mc-body {
+  padding: var(--space-4) var(--space-5);
+  flex: 1;
+}
+.mc-body h4 { font-size: var(--text-sm); margin-bottom: var(--space-2); }
+.mc-meta {
+  display: flex;
+  gap: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+.mc-meta span { display: flex; align-items: center; gap: 3px; }
+.empty-text {
+  text-align: center;
+  padding: var(--space-8);
+  color: var(--text-tertiary);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 768px) {
+  .profile-info { flex-direction: column; align-items: flex-start; }
+  .profile-stats { grid-template-columns: 1fr; }
+}
