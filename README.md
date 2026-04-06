@@ -359,5 +359,5 @@ The app uses a custom CSS design system with:
 ---
 
 <p align="center">
-  Built with 💜 by <a href="https://github.com/shashwat-p123">Shashwat</a>
+  Built with 💜 by <a href="https://github.com/shashwat-p123">shashwat-p123</a>
 </p>
